@@ -35,12 +35,12 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-//                NewsNavigator()
-                val viewModel: SearchViewModel = hiltViewModel()
-                SearchScreen(
-                    state = viewModel.state.value,
-                    event = viewModel::onEvent,
-                    navigate = {})
+                NewsNavigator()
+//                val viewModel: SearchViewModel = hiltViewModel()
+//                SearchScreen(
+//                    state = viewModel.state.value,
+//                    event = viewModel::onEvent,
+//                    navigate = {})
             }
             composable(route = Route.HomeScreen.route) {
 
