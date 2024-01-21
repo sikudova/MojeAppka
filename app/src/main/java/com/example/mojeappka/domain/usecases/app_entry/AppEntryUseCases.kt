@@ -1,4 +1,4 @@
-package com.example.mojeappka.domain.manager.usecases
+package com.example.mojeappka.domain.usecases.app_entry
 
 data class AppEntryUseCases(
     val readAppEntry: ReadAppEntry,

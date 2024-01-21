@@ -3,9 +3,9 @@ package com.example.mojeappka.di
 import android.app.Application
 import com.example.mojeappka.data.manager.LocalUserManagerImpl
 import com.example.mojeappka.domain.manager.LocalUserManager
-import com.example.mojeappka.domain.manager.usecases.AppEntryUseCases
-import com.example.mojeappka.domain.manager.usecases.ReadAppEntry
-import com.example.mojeappka.domain.manager.usecases.SaveAppEntry
+import com.example.mojeappka.domain.usecases.app_entry.AppEntryUseCases
+import com.example.mojeappka.domain.usecases.app_entry.ReadAppEntry
+import com.example.mojeappka.domain.usecases.app_entry.SaveAppEntry
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
