@@ -1,4 +1,4 @@
-package com.example.mojeappka.presentation.onboarding
+package com.example.mojeappka.presentation
 
 import androidx.compose.ui.unit.dp
 

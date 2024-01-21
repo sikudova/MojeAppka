@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.example.mojeappka.presentation.onboarding.Dimension.IndicatorSize
+import com.example.mojeappka.presentation.Dimension.IndicatorSize
 import com.example.mojeappka.ui.theme.BlueGray
 
 @Composable

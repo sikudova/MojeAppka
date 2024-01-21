@@ -17,8 +17,8 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.mojeappka.presentation.onboarding.Dimension.MediumPadding1
-import com.example.mojeappka.presentation.onboarding.Dimension.MediumPadding2
+import com.example.mojeappka.presentation.Dimension.MediumPadding1
+import com.example.mojeappka.presentation.Dimension.MediumPadding2
 import com.example.mojeappka.presentation.onboarding.Page
 import com.example.mojeappka.presentation.onboarding.pages
 import com.example.mojeappka.R

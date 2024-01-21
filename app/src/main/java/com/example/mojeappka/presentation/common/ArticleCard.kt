@@ -29,10 +29,10 @@ import coil.request.ImageRequest
 import com.example.mojeappka.R
 import com.example.mojeappka.domain.model.Article
 import com.example.mojeappka.domain.model.Source
-import com.example.mojeappka.presentation.onboarding.Dimension.ExtraSmallPadding
-import com.example.mojeappka.presentation.onboarding.Dimension.ExtraSmallPadding2
-import com.example.mojeappka.presentation.onboarding.Dimension.SmallIconSize
-import com.example.mojeappka.presentation.onboarding.Dimension.ArticleCardSize
+import com.example.mojeappka.presentation.Dimension.ExtraSmallPadding
+import com.example.mojeappka.presentation.Dimension.ExtraSmallPadding2
+import com.example.mojeappka.presentation.Dimension.SmallIconSize
+import com.example.mojeappka.presentation.Dimension.ArticleCardSize
 import com.example.mojeappka.ui.theme.MojeAppkaTheme
 
 @Composable
@@ -94,23 +94,23 @@ fun ArticleCard(
     }
 }
 
-@Preview(showBackground = true)
-@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
-@Composable
-fun ArticleCardPreview() {
-    MojeAppkaTheme(dynamicColor = false) {
-        ArticleCard(
-            article = Article(
-                author = "",
-                content = "",
-                description = "",
-                publishedAt = "2 hours",
-                source = Source(id = "", name = "BBC"),
-                title = "Her train broke down. Her phone died. And then she met her Saver in a",
-                url = "",
-                urlToImage = "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"
-            )
-        )
-    }
-}
+//@Preview(showBackground = true)
+//@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+//@Composable
+//fun ArticleCardPreview() {
+//    MojeAppkaTheme(dynamicColor = false) {
+//        ArticleCard(
+//            article = Article(
+//                author = "",
+//                content = "",
+//                description = "",
+//                publishedAt = "2 hours",
+//                source = Source(id = "", name = "BBC"),
+//                title = "Her train broke down. Her phone died. And then she met her Saver in a",
+//                url = "",
+//                urlToImage = "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"
+//            )
+//        )
+//    }
+//}
 

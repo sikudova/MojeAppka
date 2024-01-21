@@ -1,4 +1,4 @@
-package com.example.mojeappka.presentation.onboarding.common
+package com.example.mojeappka.presentation.common
 
 import android.service.autofill.OnClickAction
 import androidx.compose.foundation.shape.RoundedCornerShape

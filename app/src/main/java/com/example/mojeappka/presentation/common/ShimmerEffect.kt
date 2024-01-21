@@ -25,8 +25,8 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mojeappka.R
-import com.example.mojeappka.presentation.onboarding.Dimension
-import com.example.mojeappka.presentation.onboarding.Dimension.MediumPadding1
+import com.example.mojeappka.presentation.Dimension
+import com.example.mojeappka.presentation.Dimension.MediumPadding1
 import com.example.mojeappka.ui.theme.MojeAppkaTheme
 
 fun Modifier.shimmerEffect() = composed {
