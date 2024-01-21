@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -101,4 +102,11 @@ dependencies {
 
     //Accompanist
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
+
+    //Room
+    var room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:2.6.1")
+
 }
