@@ -11,6 +11,7 @@ import com.example.mojeappka.domain.usecases.app_entry.ReadAppEntry
 import com.example.mojeappka.domain.usecases.app_entry.SaveAppEntry
 import com.example.mojeappka.domain.usecases.news.GetNews
 import com.example.mojeappka.domain.usecases.news.NewsUseCases
+import com.example.mojeappka.domain.usecases.news.SearchNews
 import com.example.mojeappka.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -64,7 +65,7 @@ object AppModule {
     ): NewsUseCases {
         return NewsUseCases(
             getNews = GetNews(newsRepository),
-//            searchNews = SearchNews(newsRepository)
+            searchNews = SearchNews(newsRepository)
         )
     }
 

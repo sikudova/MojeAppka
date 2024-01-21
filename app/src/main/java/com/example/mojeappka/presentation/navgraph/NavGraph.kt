@@ -2,6 +2,7 @@ package com.example.mojeappka.presentation.navgraph
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
@@ -9,6 +10,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.mojeappka.presentation.news_navigator.NewsNavigator
 import com.example.mojeappka.presentation.onboarding.OnBoardingScreen
 import com.example.mojeappka.presentation.onboarding.OnBoardingViewModel
+import com.example.mojeappka.presentation.search.SearchScreen
+import com.example.mojeappka.presentation.search.SearchViewModel
 
 @Composable
 fun NavGraph(
@@ -32,7 +35,12 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-                NewsNavigator()
+//                NewsNavigator()
+                val viewModel: SearchViewModel = hiltViewModel()
+                SearchScreen(
+                    state = viewModel.state.value,
+                    event = viewModel::onEvent,
+                    navigate = {})
             }
             composable(route = Route.HomeScreen.route) {
 
