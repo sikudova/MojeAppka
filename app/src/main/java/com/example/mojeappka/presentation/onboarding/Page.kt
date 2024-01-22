@@ -11,18 +11,18 @@ data class Page(
 
 val pages = listOf(
     Page(
-        title = "Title 01",
-        description = "Description 01 blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah",
-        image = R.drawable.onboarding1
+        title = "Nejnovější BBC články",
+        description = "V aplikaci se dozvíte novinky z celého světa – politika, zdraví, sport, věda, vzdělávání a mnoho dalších odvětví.",
+        image = R.drawable.bbc_news
     ),
     Page(
-        title = "Title 02",
-        description = "Description 02 blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah",
-        image = R.drawable.onboarding2
+        title = "Oblíbené články",
+        description = "Při prohlížení článků si můžeš libovolný z nich uložit do složky oblíbených.",
+        image = R.drawable.fav_folder
     ),
     Page(
-        title = "Title 03",
-        description = "Description 03 blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah",
-        image = R.drawable.onboarding3
+        title = "Prohlížení článků na Internetu",
+        description = "Všechny články si můžeš otevřít online ve svém prohlížeči a přečíst si je přímo na oficiálních stránkách.",
+        image = R.drawable.internet_news
     )
 )
