@@ -17,6 +17,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.mojeappka.presentation.Dimension.MediumPadding1
 import com.example.mojeappka.presentation.Dimension.MediumPadding2
 import com.example.mojeappka.presentation.onboarding.Page
@@ -30,6 +31,7 @@ fun OnBoardingPage(
     page: Page
 ) {
     Column(modifier = modifier) {
+        Spacer(modifier = Modifier.height(50.dp))
         Image(
             modifier = Modifier
                 .fillMaxWidth()
