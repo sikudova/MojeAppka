@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import com.example.mojeappka.presentation.bookmark.BookmarkScreen
+import com.example.mojeappka.presentation.bookmark.BookmarkViewModel
 import com.example.mojeappka.presentation.news_navigator.NewsNavigator
 import com.example.mojeappka.presentation.onboarding.OnBoardingScreen
 import com.example.mojeappka.presentation.onboarding.OnBoardingViewModel
@@ -35,12 +37,11 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-                NewsNavigator()
-//                val viewModel: SearchViewModel = hiltViewModel()
-//                SearchScreen(
-//                    state = viewModel.state.value,
-//                    event = viewModel::onEvent,
-//                    navigate = {})
+//                NewsNavigator()
+                val viewModel: BookmarkViewModel = hiltViewModel()
+                BookmarkScreen(
+                    state = viewModel.state.value,
+                    navigate = {})
             }
             composable(route = Route.HomeScreen.route) {
 
