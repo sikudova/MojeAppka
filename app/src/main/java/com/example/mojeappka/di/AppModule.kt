@@ -5,7 +5,6 @@ import androidx.room.Room
 import com.example.mojeappka.data.local.NewsDao
 import com.example.mojeappka.data.local.NewsDatabase
 import com.example.mojeappka.data.local.NewsTypeConverter
-//import com.example.mojeappka.data.local.NewsTypeConvertor
 import com.example.mojeappka.data.manager.LocalUserManagerImpl
 import com.example.mojeappka.data.remote.NewsApi
 import com.example.mojeappka.data.repository.NewsRepositoryImpl
