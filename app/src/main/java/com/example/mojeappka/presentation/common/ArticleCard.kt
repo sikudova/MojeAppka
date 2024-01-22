@@ -33,6 +33,7 @@ import com.example.mojeappka.presentation.Dimension.ExtraSmallPadding
 import com.example.mojeappka.presentation.Dimension.ExtraSmallPadding2
 import com.example.mojeappka.presentation.Dimension.SmallIconSize
 import com.example.mojeappka.presentation.Dimension.ArticleCardSize
+import com.example.mojeappka.presentation.Dimension.MediumPadding1
 import com.example.mojeappka.ui.theme.MojeAppkaTheme
 
 @Composable
@@ -58,7 +59,7 @@ fun ArticleCard(
         Column(
             verticalArrangement = Arrangement.SpaceAround,
             modifier = Modifier
-                .padding(horizontal = ExtraSmallPadding)
+                .padding(horizontal = MediumPadding1)
                 .height(ArticleCardSize)
         ) {
             Text(

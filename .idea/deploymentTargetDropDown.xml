@@ -8,6 +8,9 @@
       <entry key="DetailsScreenPreview">
         <State />
       </entry>
+      <entry key="NewsBottomNavigationPreview">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <runningDeviceTargetSelectedWithDropDown>
@@ -16,12 +19,12 @@
               <deviceKey>
                 <Key>
                   <type value="SERIAL_NUMBER" />
-                  <value value="JAAZB760S888H3D" />
+                  <value value="R7AIB7005767RRX" />
                 </Key>
               </deviceKey>
             </Target>
           </runningDeviceTargetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-01-22T08:51:58.087124200Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-01-22T11:08:54.179750300Z" />
         </State>
       </entry>
     </value>

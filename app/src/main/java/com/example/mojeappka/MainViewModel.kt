@@ -25,12 +25,12 @@ class MainViewModel @Inject constructor(
 
     init {
         appEntryUseCases.readAppEntry().onEach { shouldStartFromHomeScreen ->
-            if(shouldStartFromHomeScreen){
+            if (shouldStartFromHomeScreen) {
                 _startDestination.value = Route.NewsNavigation.route
-            }else{
+            } else {
                 _startDestination.value = Route.AppStartNavigation.route
             }
-            delay(300) //Without this delay, the onBoarding screen will show for a momentum.
+            delay(300)
             _splashCondition.value = false
         }.launchIn(viewModelScope)
     }
