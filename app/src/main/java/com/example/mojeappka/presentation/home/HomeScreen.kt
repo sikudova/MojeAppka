@@ -27,7 +27,6 @@ import com.example.mojeappka.domain.model.Article
 import com.example.mojeappka.presentation.Dimension.MediumPadding1
 import com.example.mojeappka.presentation.common.ArticlesList
 import com.example.mojeappka.presentation.common.SearchBar
-import com.example.mojeappka.presentation.navgraph.Route
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -70,22 +69,24 @@ fun HomeScreen(
             modifier = Modifier
                 .padding(horizontal = MediumPadding1)
                 .fillMaxWidth(),
-            text = "",
+            text = "Hledej, co tě zajímá...",
             readOnly = true,
             onValueChange = {},
             onSearch = {},
             onClick = {
                 navigateToSearch()
-            }
+            },
         )
 
         Spacer(modifier = Modifier.height(MediumPadding1))
 
         Text(
-            text = titles, modifier = Modifier
+            text = "Mějte ty nejnovější informace vždy po ruce. Ať už se jedná o sport, vědu, vzdělání, politiku, umění, krásu i zábavu.",
+            modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = MediumPadding1)
-                .basicMarquee(), fontSize = 12.sp,
+                .basicMarquee(),
+            fontSize = 12.sp,
             color = colorResource(id = R.color.placeholder)
         )
 
