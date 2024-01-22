@@ -54,7 +54,7 @@ fun NewsBottomNavigation(
                 colors = NavigationBarItemDefaults.colors(
                     selectedIconColor = MaterialTheme.colorScheme.primary,
                     selectedTextColor = MaterialTheme.colorScheme.primary,
-                    unselectedIconColor = colorResource(id = R.color.body),
+                    unselectedIconColor = MaterialTheme.colorScheme.primary,
                     unselectedTextColor = colorResource(id = R.color.body),
                     indicatorColor = MaterialTheme.colorScheme.background
                 ),
@@ -77,6 +77,7 @@ fun NewsBottomNavigationPreview() {
             BottomNavigationItem(icon = R.drawable.ic_home, text = "Home"),
             BottomNavigationItem(icon = R.drawable.ic_search, text = "Search"),
             BottomNavigationItem(icon = R.drawable.ic_bookmark, text = "Bookmark"),
+            BottomNavigationItem(icon = R.drawable.ic_home, text = "Něco"),
         ), selectedItem = 0, onItemClick = {})
     }
 }
