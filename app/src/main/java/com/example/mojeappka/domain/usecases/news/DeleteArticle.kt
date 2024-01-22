@@ -2,10 +2,11 @@ package com.example.mojeappka.domain.usecases.news
 
 import com.example.mojeappka.data.local.NewsDao
 import com.example.mojeappka.domain.model.Article
+import com.example.mojeappka.domain.repository.NewsRepository
 
-class DeleteArticle(private val newsDao: NewsDao) {
+class DeleteArticle(private val newsRepository: NewsRepository) {
     suspend operator fun invoke(article: Article) {
-        newsDao.delete(article = article)
+        newsRepository.deleteArticle(article = article)
     }
 
 }
