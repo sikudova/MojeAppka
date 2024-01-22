@@ -85,7 +85,7 @@ fun ArticleCard(
                 )
                 Spacer(modifier = Modifier.width(ExtraSmallPadding))
                 Text(
-                    text = article.publishedAt,
+                    text = article.publishedAt.substring(0, 10),
                     style = MaterialTheme.typography.labelSmall,
                     color = colorResource(id = R.color.body)
                 )
@@ -94,23 +94,23 @@ fun ArticleCard(
     }
 }
 
-//@Preview(showBackground = true)
-//@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
-//@Composable
-//fun ArticleCardPreview() {
-//    MojeAppkaTheme(dynamicColor = false) {
-//        ArticleCard(
-//            article = Article(
-//                author = "",
-//                content = "",
-//                description = "",
-//                publishedAt = "2 hours",
-//                source = Source(id = "", name = "BBC"),
-//                title = "Her train broke down. Her phone died. And then she met her Saver in a",
-//                url = "",
-//                urlToImage = "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"
-//            )
-//        )
-//    }
-//}
+@Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Composable
+fun ArticleCardPreview() {
+    MojeAppkaTheme(dynamicColor = false) {
+        ArticleCard(
+            article = Article(
+                author = "",
+                content = "",
+                description = "",
+                publishedAt = "2 hours",
+                source = Source(id = "", name = "BBC"),
+                title = "Her train broke down. Her phone died. And then she met her Saver in a",
+                url = "",
+                urlToImage = "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"
+            )
+        )
+    }
+}
 
