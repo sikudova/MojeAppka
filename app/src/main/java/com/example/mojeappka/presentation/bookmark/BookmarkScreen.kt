@@ -1,7 +1,6 @@
 package com.example.mojeappka.presentation.bookmark
 
 import androidx.compose.runtime.Composable
-import com.example.mojeappka.domain.model.Article
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,13 +13,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import com.example.mojeappka.R
+import com.example.mojeappka.domain.model.Article
 import com.example.mojeappka.presentation.Dimension.MediumPadding1
 import com.example.mojeappka.presentation.common.ArticlesList
+import com.example.mojeappka.presentation.navgraph.Route
 
 @Composable
 fun BookmarkScreen(
     state: BookmarkState,
-    navigate: (Article) -> Unit
+    navigateToDetails: (Article) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -41,7 +42,7 @@ fun BookmarkScreen(
 
         ArticlesList(
             articles = state.articles,
-            onClick = navigate
+            onClick = { navigateToDetails(it) }
         )
     }
 }
