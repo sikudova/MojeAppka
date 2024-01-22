@@ -37,23 +37,7 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-//                NewsNavigator()
-                val viewModel: BookmarkViewModel = hiltViewModel()
-                BookmarkScreen(
-                    state = viewModel.state.value,
-                    navigate = {})
-            }
-            composable(route = Route.HomeScreen.route) {
-
-            }
-            composable(route = Route.SearchScreen.route) {
-
-            }
-            composable(route = Route.BookmarkScreen.route) {
-
-            }
-            composable(route = Route.DetailsScreen.route) {
-
+                NewsNavigator()
             }
         }
     }
