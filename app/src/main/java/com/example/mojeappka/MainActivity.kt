@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
             })
         }
         setContent {
+
             MojeAppkaTheme {
 
                 val isSystemInDarkMode = isSystemInDarkTheme()
