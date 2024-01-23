@@ -3,7 +3,6 @@ package com.example.mojeappka.presentation.news_navigator
 import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,13 +28,13 @@ import com.example.mojeappka.presentation.details.DetailsScreen
 import com.example.mojeappka.presentation.details.DetailsViewModel
 import com.example.mojeappka.presentation.home.HomeScreen
 import com.example.mojeappka.presentation.home.HomeViewModel
+import com.example.mojeappka.presentation.location.LocationScreen
 import com.example.mojeappka.presentation.navgraph.Route
 import com.example.mojeappka.presentation.news_navigator.components.BottomNavigationItem
 import com.example.mojeappka.presentation.news_navigator.components.NewsBottomNavigation
 import com.example.mojeappka.presentation.search.SearchScreen
 import com.example.mojeappka.presentation.search.SearchViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsNavigator() {
 
@@ -44,7 +43,7 @@ fun NewsNavigator() {
             BottomNavigationItem(icon = R.drawable.ic_home, text = "Domů"),
             BottomNavigationItem(icon = R.drawable.ic_search, text = "Hledej"),
             BottomNavigationItem(icon = R.drawable.ic_bookmark, text = "Záložky"),
-            BottomNavigationItem(icon = R.drawable.ic_home, text = "Něco"),
+            BottomNavigationItem(icon = R.drawable.ic_map, text = "Poloha"),
         )
     }
 
@@ -58,12 +57,16 @@ fun NewsNavigator() {
             Route.HomeScreen.route -> 0
             Route.SearchScreen.route -> 1
             Route.BookmarkScreen.route -> 2
+            Route.LocationScreen.route -> 3
             else -> 0
         }
     }
 
     val isBottomBarVisible = remember(key1 = backStackState) {
-        backStackState?.destination?.route == Route.HomeScreen.route || backStackState?.destination?.route == Route.SearchScreen.route || backStackState?.destination?.route == Route.BookmarkScreen.route
+        backStackState?.destination?.route == Route.HomeScreen.route
+                || backStackState?.destination?.route == Route.SearchScreen.route
+                || backStackState?.destination?.route == Route.BookmarkScreen.route
+                || backStackState?.destination?.route == Route.LocationScreen.route
     }
 
     Scaffold(modifier = Modifier.fillMaxSize(), bottomBar = {
@@ -82,6 +85,10 @@ fun NewsNavigator() {
 
                         2 -> navigateToTab(
                             navController = navController, route = Route.BookmarkScreen.route
+                        )
+
+                        3 -> navigateToTab(
+                            navController = navController, route = Route.LocationScreen.route
                         )
 
                     }
@@ -138,6 +145,9 @@ fun NewsNavigator() {
                 BookmarkScreen(state = state, navigateToDetails = { article ->
                     navigateToDetails(navController = navController, article = article)
                 })
+            }
+            composable(route = Route.LocationScreen.route) {
+                LocationScreen(navController)
             }
         }
     }
