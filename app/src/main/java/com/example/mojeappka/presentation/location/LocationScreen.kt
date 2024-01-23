@@ -48,18 +48,12 @@ fun LocationScreen(navController: NavController) {
         Text(
             text = "Tvoje poloha",
             style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.Bold),
-            color = colorResource(
-                id = R.color.text_title
-            )
         )
 
         Spacer(modifier = Modifier.height(Dimension.MediumPadding1))
 
         Text(
             text = "Location: nic :(",
-            color = colorResource(
-                id = R.color.text_title
-            )
         )
 
     }

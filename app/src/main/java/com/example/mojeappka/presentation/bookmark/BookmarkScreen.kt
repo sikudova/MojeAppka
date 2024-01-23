@@ -33,9 +33,6 @@ fun BookmarkScreen(
         Text(
             text = "Uložené články",
             style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.Bold),
-            color = colorResource(
-                id = R.color.text_title
-            )
         )
 
         Spacer(modifier = Modifier.height(MediumPadding1))
